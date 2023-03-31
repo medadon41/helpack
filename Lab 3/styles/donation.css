@@ -1,0 +1,152 @@
+body {
+    background: rgb(21,120,107);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+main {
+    background: #fff;
+    width: auto;
+    max-height: 100%;
+    height: auto;
+    min-height: 50em;
+    border-radius: 20px;
+    padding: 2em 2.5em 2em 2em;
+}
+
+.donation-form {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.donation-info {
+    display: flex;
+    height: auto;
+    flex-direction: row;
+}
+
+.donation-info img {
+    height: 7em;
+    width: auto;
+    border-radius: 50%;
+}
+
+.donation-info__short-description {
+    margin-left: 1em;
+}
+
+.donation-info__short-description h2 {
+    margin-top: 10px;
+    font-size: 2.25em;
+}
+
+.donation-info__short-description p {
+    margin-top: 0;
+    font-size: 1.25em;
+}
+
+.form-wrapper {
+    height: 60%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.form-element {
+    resize: none;
+    min-height: 40px;
+    border-radius: 10px;
+    border: 1px solid #15786b;
+    transition: .1s;
+    font-family: Montserrat;
+    padding-left: 10px;
+}
+
+.form-element::placeholder {
+    font-family: Montserrat;
+    color: #15786b;
+    font-size: 1em;
+    vertical-align: text-top;
+}
+
+.form-element:focus {
+    outline: none;
+    border-color: #599D94;
+    box-shadow: 0 0 0px 2px #599D94;
+    transition: .1s;
+}
+
+.donation-complete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.donation-complete input[type=number] {
+    width: 20%;
+}
+
+.donation-button {
+    height: 100%;
+    width: 25%;
+    background: #15786b;
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.donation-button img {
+    width: 2.5em;
+    vertical-align: middle;
+}
+
+.form-message {
+    height: 60%;
+    min-height: 10em;
+}
+
+.footer-logo {
+    display: flex;
+    height: auto;
+    justify-content: center;
+}
+
+.footer-logo img {
+    height: 3em;
+    width: auto;
+}
+
+@media all and (max-width: 700px) {
+    .donation-info img {
+        height: auto;
+        width: 7em;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    .donation-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .donation-complete {
+        flex-direction: column;
+    }
+
+    .donation-complete input[type=number] {
+        width: auto;
+    }
+
+    .donation-button {
+        width: auto;
+    }
+}

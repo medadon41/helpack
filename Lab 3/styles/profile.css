@@ -1,0 +1,258 @@
+body {
+    background: rgb(21,120,107);
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    width: 100%;
+    height: 100%;
+    min-width: 370px;
+    max-width: 80em;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.profile-details {
+    background: #ffffff;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 20px;
+    min-width: 330px;
+    width: auto;
+    height: auto;
+    padding: 1em 2em 1em 1.25em;
+    box-sizing: border-box;
+}
+
+.profile-details__description {
+    margin-top: 1em;
+    font-family: Montserrat;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.profile-details__goal {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.progress-bar {
+    background-color: #92C3BD;
+    width: 100%;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.progress-reached {
+    background-color: #599D94;
+    color: white;
+    padding: 1%;
+    font-family: "Montserrat";
+    text-align: right;
+    font-size: 20px;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.profile-details__progress-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.profile-details__goal-description {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1em;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreboard__row {
+    display: flex;
+    width: 90%;
+    height: 2.5em;
+    margin: 0 auto;
+}
+
+.scoreboard__row:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.scoreboard__row:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.scoreboard__row img {
+    margin-top: 5px;
+    height: 80%;
+    width: auto;
+}
+
+.scoreboard-row-primary {
+    background: #599D94;
+}
+
+.scoreboard-row-secondary {
+    background: #92C3BD;
+}
+
+.scoreboard-top-donator {
+    background: #D32E3A;
+}
+
+.scoreboard__row-position {
+    text-align: center;
+    line-height: 1.5em;
+    color: #ffffff;
+    width: 10%;
+    font-family: "Montserrat SemiBold";
+    font-size: 1.5em;
+    display: block;
+    height: 80%;
+    align-items: center;
+}
+
+.scoreboard__row-donator-name {
+    text-align: left;
+    color: white;
+    line-height: 1.5em;
+    width: 60%;
+    font-family: "Montserrat SemiBold";
+    font-size: 1.5em;
+}
+
+.scoreboard__row-amount {
+    text-align: right;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    color: #fff;
+    width: 30%;
+    font-family: "Montserrat SemiBold";
+    font-size: 1.5em;
+}
+
+.footer-logo {
+    margin-top: 5em;
+    left: 0;
+    bottom: 0;
+}
+
+.profile-card {
+    max-width: 17em;
+    min-width: 17em;
+    width: auto;
+    max-height: 20em;
+    height: auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-element {
+    resize: none;
+    min-height: 40px;
+    border-radius: 10px;
+    border: 1px solid #15786b;
+    transition: .1s;
+    font-family: Montserrat;
+    padding-left: 10px;
+}
+
+.donation-button {
+    height: 2.5em;
+    width: 100%;
+    background: #15786b;
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.donation-button img {
+    width: 1.5em;
+    vertical-align: middle;
+}
+
+figure {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.profile-card__avatar {
+    display: block;
+    height: auto;
+    width: 80%;
+}
+
+.profile-card p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.profile-card__card-links {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.profile-card__card-links a {
+    font-family: "Montserrat SemiBold";
+    font-size: 0.85em;
+    text-decoration: none;
+    color: #15786B;
+}
+
+.donate-button {
+    display: flex;
+    justify-content: left;
+    width: 80%;
+    height: 10%;
+    background: #15786b;
+    border-radius: 10px;
+}
+
+.donate-button img {
+    display: block;
+    height: 80%;
+    width: auto;
+    margin-top: 0.1em;
+    margin-left: 1em;
+}
+
+.donate-button b {
+    color: white;
+    line-height: 1.5em;
+}
+
+@media all and (max-width: 700px) {
+    main {
+        flex-direction: column-reverse;
+    }
+
+    .profile-card {
+        max-width: none;
+    }
+
+    .profile-card__avatar {
+        max-height: 70%;
+        width: auto;
+    }
+}

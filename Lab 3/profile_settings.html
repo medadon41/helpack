@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/profile_settings.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo1.png">
+</head>
+<body>
+    <header>
+        <img src="images/logo_ins_trans.png">
+    </header>
+    <main>
+        <section class="buttons">
+            <a href="profile_settings.html">Profile</a>
+            <a href="account_settings.html" class="link-inactive">Account</a>
+        </section>
+        <form method="post" enctype="multipart/form-data">
+            <section class="form-wrapper">
+                <section class="project-desc">
+                    <div>
+                        <label for="title">Title</label>
+                        <input type="text" class="form-element" id="title">
+                    </div>
+
+                    <div>
+                    <label for="description">Description</label>
+                    <textarea id="description" class="form-element form-textarea"></textarea>
+                    </div>
+
+                    <div>
+                    <label for="goal">Goal</label>
+                    <input type="text" class="form-element" id="goal">
+                    </div>
+
+                    <div>
+                    <label for="goal-desc">Goal description</label>
+                    <input type="text" class="form-element" id="goal-desc">
+                    </div>
+                </section>
+                <section class="donation-desc">
+                    <section class="personal-info">
+                        <div class="image-wrapper">
+                            <img src="images/Avatar.png">
+                            <label for="file-upload" class="custom-file-upload">
+                                Choose file
+                            </label>
+                            <input type="file" id="file-upload">
+                        </div>
+                        <label for="name">Name</label>
+                        <input type="text" class="form-element" id="name">
+                    </section>
+                    <label for="donation-title">Donation page title</label>
+                    <input type="text" class="form-element" id="donation-title">
+
+                    <label for="donation-desc">Donation page description</label>
+                    <textarea id="donation-desc" class="form-element"></textarea>
+                </section>
+            </section>
+            <button class="form-element form-button">Save</button>
+        </form>
+    </main>
+</body>
+</html>

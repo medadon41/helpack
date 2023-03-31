@@ -1,0 +1,79 @@
+main {
+    height: auto;
+    background: #F3DEE0;
+    flex: auto;
+}
+
+body {
+    margin: 0;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+footer {
+    background: #ffffff;
+    height: 5em;
+}
+
+title {
+    display: block;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 3.5em;
+}
+
+figure {
+    display: table;
+    width: auto;
+    margin: 20 0 20 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+figcaption {
+    font-family: Montserrat;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 9em;
+}
+
+p {
+    font-family: Montserrat;
+    margin: 0;
+    font-size: 0.875em;
+}
+
+a {
+    text-decoration: none;
+    color: #15786B;
+}
+
+h3 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 1.25em;
+    margin-bottom: 0;
+}
+
+.copyright {
+    text-align: center;
+}

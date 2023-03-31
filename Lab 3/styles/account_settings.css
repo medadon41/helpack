@@ -1,0 +1,156 @@
+body {
+    background: #F3DEE0;
+    margin: 0;
+}
+
+main {
+    height: auto;
+    width: 70%;
+    max-width: 70em;
+    min-width: 370px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 2px solid #15786b;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 70em;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.25em;
+}
+
+.creds-details {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.payment-details {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 40%;
+    height: auto;
+    background: #92C3BD;
+    color: #15786b;
+    border: 2px solid #15786b;
+    border-radius: 10px;
+}
+
+.personal-info label, input {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 20px;
+}
+
+label, input {
+    display: block;
+}
+
+.form-element {
+    resize: none;
+    min-height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #15786b;
+    transition: .1s;
+    font-family: Montserrat;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    width: 10em;
+    background: #15786b;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1em;
+}
+
+.form-button:hover {
+    background: #fff;
+    color: #15786b;
+}
+
+.form-textarea {
+    min-height: 100px;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 15em;
+}
+
+.image-wrapper img {
+    max-height: 15em;
+    width: auto;
+}
+
+.custom-file-upload {
+    background: #F0EFEF;
+    font-family: Montserrat;
+    font-size: 1em;
+    padding: 5px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label {
+    font-family: "Montserrat SemiBold";
+    color: #15786b;
+    font-size: 1.25em;
+    vertical-align: text-top;
+}
+
+.form-element:focus {
+    outline: none;
+    border-color: #599D94;
+    box-shadow: 0 0 0px 2px #599D94;
+    transition: .1s;
+}
+
+@media all and (max-width: 700px) {
+    .form-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .creds-details {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .payment-details {
+        width: 100%;
+    }
+
+    .image-wrapper {
+        margin: 0 auto;
+    }
+}
