@@ -7,7 +7,7 @@ class DonationScoreboardViewModel {
     }
 }
 
-let mockDonations = [new DonationScoreboardViewModel("Donator #1", 200),
+let mockDonations = [new DonationScoreboardViewModel("Donator #1", 0),
                     new DonationScoreboardViewModel("Donator #2", 1),
                     new DonationScoreboardViewModel("Donator #3", 12),
                     new DonationScoreboardViewModel("Donator #4", 2),
