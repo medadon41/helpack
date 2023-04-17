@@ -124,6 +124,12 @@ label {
     vertical-align: text-top;
 }
 
+select {
+    background: #fff;
+    font-size: 1em;
+    padding-top: 10px;
+}
+
 .form-element:focus {
     outline: none;
     border-color: #599D94;

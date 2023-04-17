@@ -1,6 +1,10 @@
+using System.Web;
 using helpack.Data;
 using helpack.Misc;
+using MailKit;
 using Microsoft.EntityFrameworkCore;
+using IMailService = helpack.Services.IMailService;
+using MailService = helpack.Services.MailService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +20,12 @@ builder.Services.AddDbContext<HelpackDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("HelpackDbConnection"));
 });
 
-builder.Services.AddAutoMapper(typeof(HelpackProfile));
+builder.Services.AddAutoMapper(typeof(HelpackProfile), typeof(DonationProfile));
+
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection(nameof(MailSettings)));
+builder.Services.AddTransient<IMailService, MailService>();
+
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -25,6 +34,9 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors(
+        options => options.WithOrigins("localhost:63342").AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
+    );
 }
 
 app.UseHttpsRedirection();

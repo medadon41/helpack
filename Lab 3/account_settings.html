@@ -9,14 +9,16 @@
 </head>
 <body>
 <header>
-  <img src="images/logo_ins_trans.png">
+  <a href="main.html">
+    <img src="images/logo_ins_trans.png">
+  </a>
 </header>
 <main>
   <section class="buttons">
     <a href="profile_settings.html" class="link-inactive">Profile</a>
     <a href="account_settings.html">Account</a>
   </section>
-  <form method="post" enctype="multipart/form-data">
+  <form method="post" onsubmit="return handleFormSubmit();" enctype="multipart/form-data">
     <section class="form-wrapper">
       <section class="creds-details">
         <div>
@@ -26,17 +28,17 @@
 
         <div>
         <label for="old-password">Old Password</label>
-        <input type="text" class="form-element" id="old-password">
+        <input type="password" class="form-element" id="old-password">
         </div>
 
         <div>
           <label for="new-password">New Password</label>
-          <input type="text" class="form-element" id="new-password">
+          <input type="password" class="form-element" id="new-password">
         </div>
 
         <div>
           <label for="new-password-2">Confirm New Password</label>
-          <input type="text" class="form-element" id="new-password-2">
+          <input type="password" class="form-element" id="new-password-2">
         </div>
       </section>
       <section class="payment-details">
@@ -46,5 +48,6 @@
     <button class="form-element form-button">Save</button>
   </form>
 </main>
+<script src="js/account_settings.js"></script>
 </body>
 </html>

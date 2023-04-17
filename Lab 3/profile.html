@@ -10,18 +10,17 @@
 <body>
     <main>
         <section class="profile-details">
-            <h2>I'm alright, Jack, keep your hands off of my stack</h2>
-            <b>Category: </b> <i>start-ups</i>
+            <h2 id="profile-title"></h2>
+            <b>Category: </b> <i id="profile-category">start-ups</i>
             <article class="profile-details__description">
-                Money, get away. You get a good job with more pay, and you're okay. Money, it's a gas. Grab that cash with both hands and make a stash. New car, caviar, four-star daydream. Think I'll buy me a football team. Money, get back. I'm alright, Jack, keep your hands off of my stack. Money, it's a hit. Ah, don't give me that do-goody-good bullshit. I'm in the high-fidelity first class travelling set and I think I need a Learjet. Money, it's a crime. Share it fairly, but don't take a slice of my pie. Money, so they say. Is the root of all evil today. But if you ask for a rise, it's no surprise that they're giving none away.
             </article>
             <div class="profile-details__goal">
                 <div class="profile-details__progress-container">
                     <div class="progress-bar">
-                        <div class="progress-reached">50%</div>
+                        <div class="progress-reached"></div>
                     </div>
                     <div class="goal-sums">
-                        <b style="float: left">0</b><b style="float: right">410</b>
+                        <b style="float: left" >0</b><b style="float: right" id="profile-goal">410</b>
                     </div>
                 </div>
                 <article class="profile-details__goal-description">
@@ -86,7 +85,9 @@
 <!--                    </div>-->
 <!--                </div>-->
             </div>
-            <img class="footer-logo" src="images/via_helpack.png">
+            <a href="main.html">
+                <img class="footer-logo" src="images/via_helpack.png">
+            </a>
         </section>
         <aside class="profile-card">
             <img class= "profile-card__avatar" src="images/Avatar.png"/>
@@ -96,10 +97,10 @@
                 <a href="#">mddnpoly.net</a>
                 <a href="#">medadon</a>
             </div>
-            <button type="button" autocomplete="off" class="donation-button form-element">
+            <a id="donate-button" class="donation-button form-element">
                 <img src="images/logo1.png">
                 <b>Donate</b>
-            </button>
+            </a>
         </aside>
     </main>
     <script src="js/profile.js"></script>

@@ -9,30 +9,39 @@
 </head>
 <body>
     <header>
-        <img src="images/logo_ins_trans.png">
+        <div class="header-links">
+            <a id="header-hello" href="#"></a>
+        </div>
+        <a href="main.html">
+            <img src="images/logo_ins_trans.png">
+        </a>
+        <div class="header-links">
+            <a id="header-settings" href="#">Settings</a>
+            <a id="header-auth" href="#">Logout</a>
+        </div>
     </header>
     <main>
       <div class="stats-wrapper">
           <section class="stats">
-              <div class="stats__graph">
-                  <img src="images/graph.png">
-              </div>
+              <canvas class="stats__graph">
+
+              </canvas>
               <div class="stats__estimated">
                   <h3>Estimated stats</h3>
-                  <p id="avg-day"><b>Average per day:</b> $20</p>
+                  <p id="avg-day"></p>
                   <p><b>Most popular currency:</b> ETH</p>
-                  <p id="highest-day"><b>Highest day:</b> 01.03.2023</p>
-                  <p id="lowest-day"><b>Lowest day:</b> 26.02.2023</p>
+                  <p id="highest-day"></p>
+                  <p id="lowest-day"></p>
               </div>
           </section>
       </div>
       <div class="user-info-wrapper">
           <section class="user-info">
               <img src="images/Avatar.png">
-              <h2><a href="#">medadon</a></h2>
-              <p><b>Date joined:</b> 22.02.2023</p>
-              <p id="user-raised"><b>Raised so far:</b> $210</p>
-              <p id="donators-sum"><b>Total donators:</b> 5</p>
+              <h2><a id="user-name" href="#"></a></h2>
+              <p id="user-joined"></p>
+              <p id="user-raised"></p>
+              <p id="donators-sum"></p>
           </section>
       </div>
       <div class="cards-wrapper">
@@ -43,10 +52,50 @@
       </div>
       <div class="currency-wrapper">
           <section class="currency">
-              <h1>External currency API</h1>
+              <h2>Currency rates</h2>
+              <p id="date-update">as on 16.04.2023 22:00</p>
+              <section class="currency-table">
+                  <b>1 USD</b>
+                  <b id="eur-rate">X EUR</b>
+                  <b id="byn-rate">X BYN</b>
+                  <b id="rub-rate">X RUB</b>
+                  <b id="uah-rate">X UAH</b>
+                  <b id="btc-rate">X BTC</b>
+              </section>
+              <section class="currency-converter">
+                  <div class="currency-converter__data">
+                      <input type="text" id="data-input" class="form-element" >
+                      <select id="select-data" class="form-element">
+                          <option value="BTC">BTC</option>
+                          <option value="USD">USD</option>
+                          <option value="EUR">EUR</option>
+                          <option value="BYN">BYN</option>
+                          <option value="RUB">RUB</option>
+                          <option value="UAH">UAH</option>
+                          <option value="PLN">PLN</option>
+                      </select>
+                  </div>
+                  <button class="form-element form-button" id="convert-button">
+                      Convert
+                  </button>
+                  <div class="currency-converter__result">
+                      <input type="text" id="data-result" class="form-element" disabled/>
+                      <select id="select-result" class="form-element">
+                          <option value="BTC">BTC</option>
+                          <option value="USD">USD</option>
+                          <option value="EUR">EUR</option>
+                          <option value="BYN">BYN</option>
+                          <option value="RUB">RUB</option>
+                          <option value="UAH">UAH</option>
+                          <option value="PLN">PLN</option>
+                      </select>
+                  </div>
+              </section>
           </section>
       </div>
     </main>
-    <script src="js/insights.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="js/insights.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>

@@ -36,7 +36,7 @@ main {
 }
 
 .stats__graph {
-    width: 70%;
+    width: 100% !important;
     height: 100%;
 }
 
@@ -154,10 +154,85 @@ main {
 .currency {
     border: 1px solid #599D94;
     border-radius: 10px;
-    background: #92C3BD;
+    padding: 10px;
+    height: auto;
     background-size: cover;
     text-align: center;
     color: #15786b;
+}
+
+.currency-table {
+    padding-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.currency-table div {
+    display: block;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+select {
+    background: #fff;
+    font-size: 1em;
+    padding-top: 4px;
+    box-sizing: border-box;
+}
+
+.currency-converter {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.currency-converter__data {
+    align-items: center;
+}
+
+.form-element {
+    min-height: 30px;
+    border-radius: 10px;
+    border: 1px solid #15786b;
+    transition: .1s;
+    font-family: Montserrat;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+
+.form-element:focus {
+    outline: none;
+    border-color: #599D94;
+    box-shadow: 0 0 0px 2px #599D94;
+    transition: .1s;
+}
+
+.form-element:disabled {
+    background: #F0EFEF;
+    cursor: no-drop;
+}
+
+.form-button {
+    width: 10em;
+    background: #15786b;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1em;
+}
+
+.form-button:hover {
+    background: #fff;
+    color: #15786b;
+}
+
+.currency h2 {
+    color: #000000;
+    margin: 0;
 }
 
 @media all and (max-width: 700px) {

@@ -66,6 +66,11 @@ main h1 {
     color: #15786b;
 }
 
+.error-message {
+    margin: 0;
+    color: red;
+}
+
 .help-links {
     display: flex;
     flex-direction: column;

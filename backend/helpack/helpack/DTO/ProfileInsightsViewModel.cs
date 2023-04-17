@@ -7,9 +7,11 @@ public class ProfileInsightsViewModel
 {
     public int Id { get; set; }
     
-    public HelpackUser Author { get; set; }
+    public string Author { get; set; }
+    
+    public string RegistrationDate { get; set; }
 
     public string? ImageUrl { get; set; }
     
-    public virtual ICollection<Donation> Donations { get; set; }
+    public virtual IEnumerable<DonationViewModel> Donations { get; set; }
 }

@@ -1,5 +1,10 @@
 "use strict"
 
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+let donateButton = document.getElementById("donate-button")
+donateButton.href = `donation.html?id=${id}`
+
 class DonationScoreboardViewModel {
     constructor(name, amount) {
         this.name = name;
@@ -7,7 +12,7 @@ class DonationScoreboardViewModel {
     }
 }
 
-let mockDonations = [new DonationScoreboardViewModel("Donator #1", 0),
+let donationObjects = [new DonationScoreboardViewModel("Donator #1", 0),
                     new DonationScoreboardViewModel("Donator #2", 1),
                     new DonationScoreboardViewModel("Donator #3", 12),
                     new DonationScoreboardViewModel("Donator #4", 2),
@@ -17,14 +22,49 @@ let mockDonations = [new DonationScoreboardViewModel("Donator #1", 0),
                     new DonationScoreboardViewModel("Donator #12", 0)];
 
 function distinctAndSort() {
-    const resultArray = Object.values(mockDonations.reduce((acc, {name, amount}) => {
-        acc[name] = acc[name] || { name, amount: 0 };
+    return Object.values(donationObjects.reduce((acc, {name, amount}) => {
+        acc[name] = acc[name] || {name, amount: 0};
         acc[name].amount += amount;
         return acc;
     }, {}))
         .sort((a, b) => b.amount - a.amount);
+}
 
-    return resultArray;
+async function getProfile() {
+    const response = await fetch('http://localhost:5043/api/Profile/' + id, {
+        method: "GET",
+        headers: { "Accept": "application/json" }
+    })
+
+    let profile;
+
+    if (response.ok === true) {
+        profile = await response.json()
+        donationObjects = profile.donations
+    }
+
+    let profileTitle = document.getElementById("profile-title");
+    profileTitle.innerHTML = profile.title
+
+    let profileDescription = document.querySelector(".profile-details__description");
+    profileDescription.innerHTML = profile.description
+
+    let profileCategory = document.getElementById("profile-category");
+    profileCategory.innerHTML = profile.category
+
+    let profileGoal = document.getElementById("profile-goal")
+    profileGoal.innerHTML = profile.goal
+
+    let goalDescription = document.querySelector(".profile-details__goal-description");
+    goalDescription.innerHTML = profile.goalDescription
+
+    if (profile.imageUrl !== null) {
+        let profileImage = document.querySelector(".profile-card__avatar")
+        profileImage.src = profile.imageUrl
+    }
+
+    fillScoreboard()
+    adjustProgress()
 }
 
 function fillScoreboard() {
@@ -80,6 +120,4 @@ function adjustProgress() {
     progressReached.innerHTML = percentage;
 }
 
-fillScoreboard()
-adjustProgress()
-console.log(distinctAndSort())
+getProfile()

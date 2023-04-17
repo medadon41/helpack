@@ -9,14 +9,16 @@
 </head>
 <body>
     <header>
-        <img src="images/logo_ins_trans.png">
+        <a href="main.html">
+            <img src="images/logo_ins_trans.png">
+        </a>
     </header>
     <main>
         <section class="buttons">
             <a href="profile_settings.html">Profile</a>
             <a href="account_settings.html" class="link-inactive">Account</a>
         </section>
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" name="profile" enctype="multipart/form-data" onsubmit="return handleFormSubmit()">
             <section class="form-wrapper">
                 <section class="project-desc">
                     <div>
@@ -42,14 +44,20 @@
                 <section class="donation-desc">
                     <section class="personal-info">
                         <div class="image-wrapper">
-                            <img src="images/Avatar.png">
+                            <img id="current-image" src="images/Avatar.png">
                             <label for="file-upload" class="custom-file-upload">
                                 Choose file
                             </label>
                             <input type="file" id="file-upload">
                         </div>
-                        <label for="name">Name</label>
-                        <input type="text" class="form-element" id="name">
+                        <label for="category-select">Category</label>
+                        <select class="form-element" id="category-select">
+                            <option value="1">Start-ups</option>
+                            <option value="2">Content makers</option>
+                            <option value="3">Charity</option>
+                            <option value="4">Streaming</option>
+                            <option value="5">Development</option>
+                        </select>
                     </section>
                     <label for="donation-title">Donation page title</label>
                     <input type="text" class="form-element" id="donation-title">
@@ -58,8 +66,9 @@
                     <textarea id="donation-desc" class="form-element"></textarea>
                 </section>
             </section>
-            <button class="form-element form-button">Save</button>
+            <button class="form-element form-button" type="submit">Save</button>
         </form>
     </main>
+    <script src="js/profile_settings.js"></script>
 </body>
 </html>

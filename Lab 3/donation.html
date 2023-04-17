@@ -13,17 +13,17 @@
         <div class="donation-info">
             <img src="images/Avatar.png">
             <div class="donation-info__short-description">
-                <h2>Make an impact on my life!</h2>
-                <p>and get a special role on my discord server  https://discord.gg/NwjR23C6Se </p>
+                <h2 id="donation-title"></h2>
+                <p id="donation-desc"></p>
             </div>
         </div>
           <div class="form-wrapper">
-              <form>
-                  <input type="text" placeholder="Name" autocomplete="off" class="form-element">
-                  <textarea type="text" placeholder="Message" autocomplete="off" class="form-element form-message"></textarea>
+              <form method="post" name="donation" onsubmit="return handleFormSubmit()">
+                  <input type="text" name="author" placeholder="Name" autocomplete="off" class="form-element">
+                  <textarea type="text" name="message" placeholder="Message" autocomplete="off" class="form-element form-message"></textarea>
                   <section class="donation-complete">
-                      <input type="number" placeholder="Amount" autocomplete="off" min="0" class="form-element">
-                      <button type="button" autocomplete="off" class="donation-button form-element">
+                      <input type="number" name="amount" placeholder="Amount" autocomplete="off" min="0" class="form-element">
+                      <button type="submit" name="submit" autocomplete="off" class="donation-button form-element">
                           <img src="images/logo1.png">
                           <b>Donate</b>
                       </button>
@@ -38,5 +38,6 @@
           </div>
       </section>
     </main>
+    <script src="js/donation.js"></script>
 </body>
 </html>

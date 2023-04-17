@@ -2,7 +2,11 @@
 
 public class DonationViewModel
 {
-    public string DonationTitle { get; set; }
+    public string Author { get; set; }
     
-    public string DonationDescription { get; set; }
+    public string Date { get; set; }
+    
+    public double Amount { get; set; }
+    
+    public string? Message { get; set; }
 }

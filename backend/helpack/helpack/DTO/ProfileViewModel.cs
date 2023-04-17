@@ -15,11 +15,11 @@ public class ProfileViewModel
     
     public string? ImageUrl { get; set; }
     
-    public ProfileCategory Category { get; set; }
+    public string Category { get; set; }
     
     public double Goal { get; set; }
     
     public string? GoalDescription { get; set; }
 
-    public virtual ICollection<Donation> Donations { get; set; }
+    public virtual IEnumerable<DonationScoreboardViewModel> Donations { get; set; }
 }

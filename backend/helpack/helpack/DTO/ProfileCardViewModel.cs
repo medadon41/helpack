@@ -13,7 +13,7 @@ public class ProfileCardViewModel
 
     public string? ImageUrl { get; set; }
     
-    public ProfileCategory Category { get; set; }
+    public string Category { get; set; }
     
-    public int ProgressReached { get; set; }
+    public int Reached { get; set; }
 }
