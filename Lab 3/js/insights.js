@@ -95,7 +95,6 @@ function distinctAndSort() {
         acc[date].amount += amount;
         return acc;
     }, {}))
-        .sort((a, b) => b.amount - a.amount);
 }
 function fillUserStats(userDate, userName) {
     let userNameTag = document.getElementById("user-name")
